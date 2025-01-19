@@ -14,7 +14,7 @@ app.get('/api/health', (req, res) => {
 
 // Welcome route
 app.get('/api/welcome', (req, res) => {
-    res.send('Welcome to the Welcome Page!');
+    res.send('Welcome to the Welcome Page! hehehehehe');
 });
 
 // Another route (example: /about)
