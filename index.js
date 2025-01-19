@@ -1,24 +1,24 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // Root route
-app.get('/', (req, res) => {
-    res.send('Welcome to the Home Page!');
+app.get('/api/', (req, res) => {
+    res.send('Welcome to the Home Page! Pushed through CI/CD pipeline');
 });
 
 // Health route
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
     res.status(200).json({ status: 'UP', message: 'Server is healthy' });
 });
 
 // Welcome route
-app.get('/welcome', (req, res) => {
+app.get('/api/welcome', (req, res) => {
     res.send('Welcome to the Welcome Page!');
 });
 
 // Another route (example: /about)
-app.get('/about', (req, res) => {
+app.get('/api/about  ', (req, res) => {
     res.send('This is the About Page!');
 });
 
